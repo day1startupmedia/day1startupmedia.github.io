@@ -39,67 +39,67 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "24 Oct 2026, 12:59 PM IST",
-  "updated_iso": "2026-10-24T12:59+05:30",
+  "updated_ist": "25 Oct 2026, 9:22 PM IST",
+  "updated_iso": "2026-10-25T21:22+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Gold",
-    "query": "gold",
-    "volume": "5K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=gold&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Infosys",
-    "query": "infosys",
-    "volume": "5K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=infosys&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Satya Nadella",
-    "query": "satya nadella",
+    "label": "OnePlus 15 ColorOS 17 Update",
+    "query": "oneplus 15 coloros 17 update",
     "volume": "5K+",
     "category": "Tech",
-    "url": "https://news.google.com/search?q=satya+nadella&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=oneplus+15+coloros+17+update&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Reliance Jio Platforms IPO GMP",
-    "query": "reliance jio platforms ipo gmp",
-    "volume": "5K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=reliance+jio+platforms+ipo+gmp&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "iPhone Duo",
-    "query": "i phone duo",
+    "label": "Jio IPO Grey Market Premium",
+    "query": "jio ipo grey market premium",
     "volume": "2K+",
-    "category": "Tech",
-    "url": "https://news.google.com/search?q=i+phone+duo&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "category": "Business",
+    "url": "https://news.google.com/search?q=jio+ipo+grey+market+premium&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Zimbabwe vs India",
-    "query": "zimbabwe vs india",
+    "label": "Malabar Gold Rates October 2026",
+    "query": "malabar gold rates october 2026",
+    "volume": "2K+",
+    "category": "Shopping",
+    "url": "https://news.google.com/search?q=malabar+gold+rates+october+2026&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Computer Security",
+    "query": "computer security",
+    "volume": "1K+",
+    "category": "Tech",
+    "url": "https://news.google.com/search?q=computer+security&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Jammu & Kashmir Bank",
+    "query": "jammu & kashmir bank",
+    "volume": "1K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=jammu+%26+kashmir+bank&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "England vs Pakistan",
+    "query": "england vs pakistan",
+    "volume": "1M+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=england+vs+pakistan&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Vaishnavi Sharma",
+    "query": "vaishnavi sharma",
     "volume": "500K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=zimbabwe+vs+india&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=vaishnavi+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "New Zealand vs India",
-    "query": "new zealand vs india",
-    "volume": "200K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=new+zealand+vs+india&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "SonyLIV",
-    "query": "sonyliv",
-    "volume": "50K+",
-    "category": "Entertainment",
-    "url": "https://news.google.com/search?q=sonyliv&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Chef Damu",
+    "query": "chef damu",
+    "volume": "100K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=chef+damu&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
