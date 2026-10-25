@@ -1,0 +1,106 @@
+{
+ "time_spent": {
+  "title": "Where Indians spend their time online",
+  "unit": "hours per week",
+  "note": "Avg. hours per week, internet users 16+.",
+  "source": "DataReportal, Digital 2026: India (We Are Social & Meltwater; GWI survey data, Q2 2025)",
+  "source_short": "DataReportal, Digital 2026 India (GWI data, 2025)",
+  "source_url": "https://datareportal.com/reports/digital-2026-india",
+  "items": [
+   [
+    "Social media",
+    "7:12"
+   ],
+   [
+    "Short videos",
+    "6:26"
+   ],
+   [
+    "Long videos",
+    "5:29"
+   ],
+   [
+    "Music streaming",
+    "5:01"
+   ],
+   [
+    "OTT streaming",
+    "4:25"
+   ],
+   [
+    "Mobile games",
+    "4:05"
+   ],
+   [
+    "TV channels",
+    "3:23"
+   ]
+  ],
+  "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
+ },
+ "trends": {
+  "updated_ist": "24 Oct 2026, 12:59 PM IST",
+  "updated_iso": "2026-10-24T12:59+05:30",
+  "source": "Google Trends",
+  "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
+  "fetched_via": "trending page",
+  "items": [
+   {
+    "label": "Gold",
+    "query": "gold",
+    "volume": "5K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=gold&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Infosys",
+    "query": "infosys",
+    "volume": "5K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=infosys&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Satya Nadella",
+    "query": "satya nadella",
+    "volume": "5K+",
+    "category": "Tech",
+    "url": "https://news.google.com/search?q=satya+nadella&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Reliance Jio Platforms IPO GMP",
+    "query": "reliance jio platforms ipo gmp",
+    "volume": "5K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=reliance+jio+platforms+ipo+gmp&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "iPhone Duo",
+    "query": "i phone duo",
+    "volume": "2K+",
+    "category": "Tech",
+    "url": "https://news.google.com/search?q=i+phone+duo&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Zimbabwe vs India",
+    "query": "zimbabwe vs india",
+    "volume": "500K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=zimbabwe+vs+india&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "New Zealand vs India",
+    "query": "new zealand vs india",
+    "volume": "200K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=new+zealand+vs+india&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "SonyLIV",
+    "query": "sonyliv",
+    "volume": "50K+",
+    "category": "Entertainment",
+    "url": "https://news.google.com/search?q=sonyliv&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   }
+  ]
+ }
+}
