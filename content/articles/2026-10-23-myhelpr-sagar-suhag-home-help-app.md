@@ -1,15 +1,23 @@
 ---
-title: "MyHELPR: Gurugram founder Sagar Suhag wants to make home help as easy as ordering food"
-slug: myhelpr-sagar-suhag-home-help-app
+title: "MyHELPR: Gurugram founder Sagar Suhag wants to make home help as easy as
+  ordering food"
 date: 2026-10-23
-city: Gurugram
 category: Founder Story
-tags: [MyHELPR, home services, Gurugram, Sagar Suhag]
-image: images/myhelpr-sagar-suhag-home-help-app.jpg
-image_caption: "Sagar Suhag, founder of MyHELPR"
-summary: "Sagar Suhag’s MyHELPR brings cleaning, cooking, laundry, repairs, babysitting, elder care and car wash onto one app, with help arriving in 10–30 minutes depending on availability."
-author: Day1 Startup Media
+city: Gurugram
+image: images/1000301481.jpg
+image_caption: Sagar Suhag, founder of MyHELPR
+summary: Sagar Suhag’s MyHELPR brings cleaning, cooking, laundry, repairs,
+  babysitting, elder care and car wash onto one app, with help arriving in 10–30
+  minutes depending on availability.
+tags:
+  - MyHELPR
+  - home services
+  - Gurugram
+  - Sagar Suhag
 featured: false
+draft: false
+author: Day1 Startup Media
+slug: myhelpr-sagar-suhag-home-help-app
 ---
 Every Indian household knows this morning. A message arrives: the didi who helps at home is not coming today. Dishes are piled up, the cleaning is pending, and guests may be on their way. Gurugram-based founder **Sagar Suhag** is building **MyHELPR** around exactly this everyday problem.
 
