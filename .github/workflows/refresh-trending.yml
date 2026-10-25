@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: "17 */4 * * *"   # 05:47, 09:47, 13:47, 17:47, 21:47, 01:47 IST
   workflow_dispatch:
+  push:            # also runs once whenever this file or the refresh script is changed
+    branches: [main]
+    paths:
+      - .github/workflows/refresh-trending.yml
+      - refresh_pulse.py
 
 permissions:
   contents: write   # commit content/pulse.json
