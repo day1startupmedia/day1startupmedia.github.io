@@ -157,3 +157,5 @@ main{padding-top:16px;padding-bottom:32px}
 .wfl{display:inline-flex;align-items:center;gap:6px}
 .wfl:before{width:16px;height:16px}
 @media (min-width:700px){.wac{flex-direction:row;align-items:center;justify-content:space-between;padding:18px 22px}.wab{flex-shrink:0}}
+/* small phones (360px Android): keep the header inside the screen, no sideways scroll */
+@media (max-width:380px){.top-in{gap:8px}.mainnav{gap:8px}.mainnav a.srch{width:34px;height:34px}.btn-feature{padding:7px 10px;font-size:12px}}
