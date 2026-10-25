@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "25 Oct 2026, 10:15 PM IST",
-  "updated_iso": "2026-10-25T22:15+05:30",
+  "updated_ist": "26 Oct 2026, 2:12 AM IST",
+  "updated_iso": "2026-10-26T02:12+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -60,6 +60,20 @@
     "url": "https://news.google.com/search?q=england+vs+pakistan&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "ENG vs Pak",
+    "query": "eng vs pak",
+    "volume": "200K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=eng+vs+pak&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Man Utd vs Bournemouth",
+    "query": "man utd vs bournemouth",
+    "volume": "200K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=man+utd+vs+bournemouth&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Chef Damu",
     "query": "chef damu",
     "volume": "100K+",
@@ -67,39 +81,25 @@
     "url": "https://news.google.com/search?q=chef+damu&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Tejal Hasabnis",
-    "query": "tejal hasabnis",
+    "label": "Indw vs Zimw",
+    "query": "indw vs zimw",
     "volume": "100K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=tejal+hasabnis&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Man Utd vs Bournemouth",
-    "query": "man utd vs bournemouth",
-    "volume": "100K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=man+utd+vs+bournemouth&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=indw+vs+zimw&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Kerala Blasters vs Mumbai City",
     "query": "kerala blasters vs mumbai city",
     "volume": "100K+",
-    "category": "Politics",
+    "category": "Sports",
     "url": "https://news.google.com/search?q=kerala+blasters+vs+mumbai+city&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Uae vs Netherlands",
-    "query": "uae vs netherlands",
+    "label": "Tejal Hasabnis",
+    "query": "tejal hasabnis",
     "volume": "50K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=uae+vs+netherlands&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Rbny vs Inter Miami",
-    "query": "rbny vs inter miami",
-    "volume": "50K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=rbny+vs+inter+miami&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=tejal+hasabnis&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
