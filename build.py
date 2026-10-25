@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Day1 Startup Media — tiny static-site generator (no dependencies).
 
-Reads content/articles/*.md (front-matter + Markdown body) and writes the
-whole site into ./site/ . Run:  python3 build.py
+Reads content/articles/*.md (YAML front-matter + Markdown body) and writes the
+whole site into ./docs/ . Run:  python3 build.py   (needs PyYAML + Pillow:
+pip install pyyaml pillow). On GitHub, .github/workflows/build.yml runs this on
+every push to main and deploys docs/ to GitHub Pages.
 Settings live in config.json (site URL, WhatsApp number, socials).
 """
 import html, json, os, re, shutil, sys
@@ -22,30 +24,67 @@ def slugify(s):
 
 
 # ---------------------------------------------------------------- content
+def _flat(v):
+    """Front-matter value -> plain string (lists are joined by build code where needed)."""
+    if v is None:
+        return ""
+    if isinstance(v, list):
+        return ", ".join(_flat(x) for x in v)
+    if isinstance(v, dict):
+        return json.dumps(v, ensure_ascii=False)
+    return str(v).strip()
+
+
 def parse_front_matter(text, path):
-    m = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", text, re.S)
+    """Front-matter is real YAML (Pages CMS writes lists, quotes and wrapped lines).
+    Every scalar stays a string (BaseLoader), exactly as the old line parser read it:
+    dates, times like 12:18 and true/false are NOT converted."""
+    text = text.replace("\r\n", "\n").lstrip("\ufeff")
+    m = re.match(r"^---\s*\n(.*?)\n?---\s*(?:\n|$)(.*)$", text, re.S)
     if not m:
         sys.exit(f"ERROR: {path} has no --- front-matter --- block")
+    try:
+        import yaml
+        data = yaml.load(m.group(1), Loader=yaml.BaseLoader) or {}
+    except ImportError:  # no PyYAML on this machine: old simple line parser
+        data = {}
+        for line in m.group(1).splitlines():
+            if not line.strip() or line.strip().startswith("#"):
+                continue
+            k, _, v = line.partition(":")
+            v = v.strip()
+            if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+                v = v[1:-1]
+            data[k.strip()] = v
+    except Exception as e:
+        sys.exit(f"ERROR: {path}: front-matter is not valid YAML: {e}")
+    if not isinstance(data, dict):
+        sys.exit(f"ERROR: {path}: front-matter is not a list of 'key: value' lines")
     meta = {}
-    for line in m.group(1).splitlines():
-        if not line.strip() or line.strip().startswith("#"):
-            continue
-        k, _, v = line.partition(":")
-        v = v.strip()
-        if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
-            v = v[1:-1]
-        meta[k.strip().lower()] = v
-    tags = meta.get("tags", "").strip("[]")
-    meta["tags"] = [t.strip().strip("\"'") for t in tags.split(",") if t.strip()]
+    for k, v in data.items():
+        k = str(k).strip().lower()
+        meta[k] = v if k == "tags" else _flat(v)
+    tags = meta.get("tags", "")
+    if isinstance(tags, list):
+        tags = [_flat(t) for t in tags]
+    else:
+        tags = _flat(tags).strip("[]").split(",")
+    meta["tags"] = [t.strip().strip("\"'") for t in tags if t and t.strip()]
     return meta, m.group(2)
+
+
+MD_ESC = re.compile(r"\\([\\`*_{}\[\]()#+\-.!>|~])")
 
 
 def inline(s):
     s = esc(s, quote=False)
+    keep = []  # backslash-escaped markdown chars (\* \- \. ...) are literal text
+    s = MD_ESC.sub(lambda m: keep.append(m.group(1)) or f"\x00{len(keep) - 1}\x00", s)
     s = re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", r'<img src="\2" alt="\1" loading="lazy">', s)
     s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", r'<a href="\2" rel="noopener">\1</a>', s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
+    s = re.sub(r"\x00(\d+)\x00", lambda m: keep[int(m.group(1))], s)
     return s
 
 
@@ -99,6 +138,8 @@ def load_articles():
             if not meta.get(req):
                 sys.exit(f"ERROR: {fn} is missing '{req}'")
         meta["slug"] = meta.get("slug") or slugify(meta["title"])
+        if not meta.get("time"):  # CMS posts have no time: use the commit time if it was committed that same day (IST)
+            meta["time"] = git_time(os.path.join("content", "articles", fn), meta["date"][:10])
         meta["category"] = meta.get("category") or "Launch"
         meta["author"] = meta.get("author") or CFG["site_name"]
         meta["dt"] = datetime.strptime(meta["date"][:10], "%Y-%m-%d")
@@ -111,6 +152,67 @@ def load_articles():
         arts.append(meta)
     arts.sort(key=lambda a: (a["dt"], a.get("time", "")), reverse=True)
     return arts
+
+
+def git_time(rel, day):
+    """HH:MM (IST) of the commit that first added `rel`, if that commit is on `day` (YYYY-MM-DD); else ""."""
+    import subprocess
+    try:
+        out = subprocess.run(["git", "log", "--diff-filter=A", "--follow", "--format=%ct", "--", rel], cwd=ROOT,
+                             capture_output=True, text=True, timeout=20).stdout.split()
+    except Exception:
+        return ""
+    if not out:
+        return ""
+    from datetime import timedelta
+    ist = datetime.fromtimestamp(int(out[-1]), timezone(timedelta(hours=5, minutes=30)))
+    return ist.strftime("%H:%M") if ist.strftime("%Y-%m-%d") == day else ""
+
+
+COVER_W, COVER_H = 1200, 675
+
+
+def prepare_covers(arts):
+    """Covers uploaded from the CMS are raw phone photos/screenshots. Any cover that is not already a
+    1200x675 JPEG is turned into one (same crop/blur as new_article.py) in the BUILT site only, as
+    images/<name>.jpg; the original upload stays untouched in content/images."""
+    for a in arts:
+        img = a.get("image", "").lstrip("/")
+        if not img:
+            continue
+        src = os.path.join(ROOT, "content", img)
+        stem, ext = os.path.splitext(os.path.basename(img))
+        out_rel = os.path.join(os.path.dirname(img), slugify(stem) + ".jpg")
+        try:
+            from PIL import Image
+            with Image.open(src) as im:
+                ok = im.format == "JPEG" and im.size == (COVER_W, COVER_H) and ext.lower() in (".jpg", ".jpeg")
+        except ImportError:
+            print("  (Pillow not installed: covers copied as they are)")
+            return
+        except Exception as e:
+            sys.exit(f"ERROR: {a['slug']}: cover image can't be read: {img} ({e})")
+        if ok:
+            continue
+        sys.path.insert(0, ROOT)
+        from new_article import make_cover
+        if os.path.normpath(out_rel) != os.path.normpath(img) and os.path.exists(os.path.join(OUT, img)):
+            os.remove(os.path.join(OUT, img))  # raw upload is not published
+        make_cover(src, os.path.join(OUT, out_rel), COVER_W, COVER_H)
+        a["image_url"] = "/" + out_rel.replace(os.sep, "/")
+        print(f"  cover made: {img} -> {out_rel}")
+
+
+ADMIN_URL = "https://app.pagescms.org/day1startupmedia/day1startupmedia.github.io/main/collection/articles"
+
+
+def admin_page():
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Admin · {esc(CFG['site_name'])}</title>
+<meta http-equiv="refresh" content="0;url={ADMIN_URL}"><script>location.replace("{ADMIN_URL}")</script>
+<style>body{{font:18px/1.5 system-ui,sans-serif;max-width:30em;margin:15vh auto;padding:0 1em;text-align:center}}a{{display:inline-block;margin-top:1em;padding:.8em 1.4em;background:#111;color:#fff;border-radius:10px;text-decoration:none}}</style>
+</head><body><p>Opening the Day1 article editor…</p><a href="{ADMIN_URL}">Open editor</a></body></html>
+"""
 
 
 def draft_images():
@@ -526,6 +628,7 @@ def main():
         p = os.path.join(OUT, img)
         if os.path.exists(p):
             os.remove(p)
+    prepare_covers(arts)
     write("index.html", home(arts))
     for a in arts:
         write(f"news/{a['slug']}/index.html", article_page(a, arts))
@@ -542,6 +645,7 @@ def main():
     write("404.html", page("Page not found", CFG["description"], "/404.html", '<div class="post static"><h1>Page not found</h1><p><a href="/">Back to the latest startup news →</a></p></div>'))
     write("rss.xml", rss(arts))
     write("sitemap.xml", sitemap(arts))
+    write("admin/index.html", admin_page())
     write(".nojekyll", "")  # GitHub Pages: serve files as they are, no Jekyll
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
     print(f"Built {len(arts)} articles -> {OUT}")

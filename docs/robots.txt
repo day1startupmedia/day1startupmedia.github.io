@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://day1startupmedia.github.io/sitemap.xml

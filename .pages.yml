@@ -1,0 +1,88 @@
+# Pages CMS (https://app.pagescms.org) settings for the Day1 Startup Media website.
+# Open https://day1startupmedia.github.io/admin/ on your phone to write articles.
+media:
+  input: content/images
+  output: images
+  rename: safe
+  categories: [image]
+
+content:
+  - name: articles
+    label: Articles
+    type: collection
+    path: content/articles
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+      primary: title
+      sort: [date, title]
+      search: [title, summary, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title (headline)
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: category
+        label: Category
+        type: select
+        required: true
+        default: Launch
+        options:
+          values: [Funding, Launch, Founder Story, Local Business]
+      - name: city
+        label: City
+        type: string
+        description: "Optional, e.g. Patna"
+      - name: image
+        label: Cover photo
+        type: image
+        description: "Any photo or screenshot. The website crops it to a wide cover by itself."
+      - name: image_caption
+        label: Photo caption
+        type: string
+        description: "Optional, e.g. Cover: Day1 Startup Media"
+      - name: summary
+        label: Summary (1-2 lines)
+        type: text
+        description: "Shown on the home page and in WhatsApp link previews."
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        description: "Startup name, city, topic. One tag per box."
+      - name: body
+        label: Article
+        type: rich-text
+        options:
+          format: markdown
+      - name: featured
+        label: Pin as top story on home page
+        type: boolean
+        default: false
+      - name: draft
+        label: Hide from website (draft)
+        type: boolean
+        default: false
+      - name: author
+        label: Author
+        type: string
+        default: Day1 Startup Media
+        hidden: true
+      - name: slug
+        label: Web address name
+        type: string
+        hidden: true
+      - name: time
+        label: Time
+        type: string
+        hidden: true
