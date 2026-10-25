@@ -7,7 +7,7 @@ the time-spent chart ("time_spent") is fixed, sourced data and is never touched 
 
 Source: the data behind https://trends.google.com/trending?geo=IN (falls back to the
 official RSS feed https://trends.google.com/trending/rss?geo=IN if that fails).
-Business / tech / auto topics go first, then the biggest topics overall.
+Topics are listed by search volume, most-searched first.
 """
 import html, json, os, re, sys, urllib.parse, urllib.request
 from datetime import datetime, timezone, timedelta
@@ -15,8 +15,7 @@ from datetime import datetime, timezone, timedelta
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PULSE = os.path.join(ROOT, "content", "pulse.json")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
-MAX_ITEMS, MAX_BIZ = 8, 5
-BIZ_CATS = {3: "Business", 18: "Tech", 1: "Auto"}           # Google Trends category ids
+MAX_ITEMS = 8
 CAT_NAMES = {3: "Business", 18: "Tech", 1: "Auto", 17: "Sports", 4: "Entertainment", 16: "Shopping",
              7: "Health", 10: "Govt", 11: "Politics", 9: "Jobs & Education", 8: "Festivals", 19: "Travel", 20: "Weather"}
 NOISE = [r"\bnational cricket team\b", r"\bnational football team\b", r"\btimeline\b", r"\bmatch scorecard\b"]
@@ -122,20 +121,10 @@ def pick(rows):
                        "url": "https://news.google.com/search?" + urllib.parse.urlencode(
                            {"q": r["query"], "hl": "en-IN", "gl": "IN", "ceid": "IN:en"})})
         return True
-    for r in rows:
-        if len(chosen) >= MAX_BIZ:
-            break
-        if set(r["cats"]) & set(BIZ_CATS):
-            add(r)
-    per_cat = {}
-    for r in rows:                         # biggest topics overall, max 2 per category
+    for r in rows:                         # pure search volume, biggest first
         if len(chosen) >= MAX_ITEMS:
             break
-        c = r["cats"][0] if r["cats"] else None
-        if c is not None and per_cat.get(c, 0) >= 2:
-            continue
-        if add(r):
-            per_cat[c] = per_cat.get(c, 0) + 1
+        add(r)
     return chosen
 
 
