@@ -1,0 +1,63 @@
+name: Refresh trending list
+
+# Every 4 hours: refresh the homepage "Trending in India today" box from Google Trends
+# (refresh_pulse.py -> content/pulse.json), commit only if the list changed, then run
+# "Build and deploy website" so the live site shows it. Can also be run by hand
+# (Actions > Refresh trending list > Run workflow).
+# If Google blocks the request (403/429) or sends nothing usable, the script exits before
+# touching pulse.json, so the site keeps the previous list; the run shows a warning.
+on:
+  schedule:
+    - cron: "17 */4 * * *"   # 05:47, 09:47, 13:47, 17:47, 21:47, 01:47 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit content/pulse.json
+  actions: write    # start the build/deploy workflow
+
+concurrency:
+  group: refresh-trending
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch today's trends
+        id: fetch
+        run: |
+          if python refresh_pulse.py; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Google Trends could not be read from GitHub's server this time (blocked or empty). The previous trending list stays on the site."
+          fi
+      - name: Commit if the list changed
+        id: commit
+        if: steps.fetch.outputs.ok == 'true'
+        run: |
+          if git diff --quiet -- content/pulse.json; then
+            echo "No change in the trending list."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898900+github-actions[bot]@users.noreply.github.com"
+          git add content/pulse.json
+          git commit -m "Refresh trending list ($(TZ=Asia/Kolkata date '+%d %b %Y, %I:%M %p IST'))"
+          for i in 1 2 3; do
+            git pull --rebase --quiet origin main && git push origin HEAD:main && break
+            sleep 5
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Rebuild and publish the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        # A push made with GITHUB_TOKEN does not start other workflows, so start the build directly.
+        run: gh workflow run build.yml --ref main

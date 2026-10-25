@@ -41,3 +41,4 @@ Category inme se ek: `Funding`, `Launch`, `Founder Story`, `Local Business`
 - `config.json` : site ka naam, WhatsApp number, Instagram/Facebook links
 - `.pages.yml` : phone editor (Pages CMS) ki settings
 - `.github/workflows/build.yml` : auto-build + deploy
+- `.github/workflows/refresh-trending.yml` : har 4 ghante "Trending in India today" list khud update (`refresh_pulse.py`), phir site rebuild

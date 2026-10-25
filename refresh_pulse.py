@@ -23,8 +23,15 @@ NOISE = [r"\bnational cricket team\b", r"\bnational football team\b", r"\btimeli
 UPPER = {"ipo", "gmp", "iit", "ai", "sbi", "rbi", "lic", "nz", "ind", "ufc", "gst", "us", "uk", "ipl", "bse", "nse",
          "upi", "isro", "tcs", "hdfc", "icici", "idbi", "ssc", "upsc", "dazn", "wi", "afg", "zim", "sa", "eng", "aus"}
 BRANDS = {"sonyliv": "SonyLIV", "jiohotstar": "JioHotstar", "youtube": "YouTube", "chatgpt": "ChatGPT",
-          "openai": "OpenAI", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "phonepe": "PhonePe", "paytm": "Paytm"}
+          "openai": "OpenAI", "linkedin": "LinkedIn", "whatsapp": "WhatsApp", "phonepe": "PhonePe", "paytm": "Paytm",
+          "oneplus": "OnePlus", "coloros": "ColorOS", "iqoo": "iQOO", "macbook": "MacBook", "ipad": "iPad"}
 STOP = {"live", "today", "news", "rate", "price", "with", "from", "india", "indian", "match", "score", "date"}
+# One-word searches that are too generic to mean anything as a headline on their own ("Bank", "Suv").
+GENERIC = {"bank", "banks", "suv", "car", "cars", "bike", "gold", "silver", "weather", "rain", "holiday", "school",
+           "college", "result", "results", "exam", "news", "market", "stock", "stocks", "share", "shares", "petrol",
+           "diesel", "train", "flight", "mobile", "phone", "laptop", "tv", "ott", "movie", "song", "video", "game",
+           "cricket", "football", "ipo", "loan", "tax", "salary", "job", "jobs", "sale", "offer", "app", "online"}
+MIN_SOLO_VOLUME = 20000   # a lone one-word topic needs at least this many searches to be shown as is
 
 
 def clean_label(t):
@@ -58,7 +65,8 @@ def from_trends_page():
     for r in rows:
         if r[5] is not None:      # trend has ended
             continue
-        out.append({"query": r[0], "volume": int(r[6] or 0), "cats": list(r[10] or [])})
+        related = [q for q in (r[9] or []) if isinstance(q, str)] if len(r) > 9 else []
+        out.append({"query": r[0], "volume": int(r[6] or 0), "cats": list(r[10] or []), "related": related})
     return out
 
 
@@ -77,8 +85,29 @@ def keywords(label):
     return {w for w in re.findall(r"[a-z]{4,}", label.lower()) if w not in STOP}
 
 
+def better_title(r):
+    """Return the search to show for a trend, or None to skip it.
+    Multi-word trends are kept as they are. A one-word trend ("nta", "bank") is swapped for the
+    first specific multi-word search Google lists under it ("jee mains 2027 registration");
+    with none, it is kept only if it is a big, non-generic topic (a name), else dropped."""
+    q = r["query"].strip()
+    if len(q.split()) > 1:
+        return q
+    for rel in r.get("related") or []:
+        rel = rel.strip()
+        low = rel.lower()
+        if (rel.isascii() and 2 <= len(rel.split()) <= 7 and low != q.lower()
+                and not any(re.search(n, low) for n in NOISE)
+                and not re.search(r"\b(tomorrow|today|yesterday|holiday|near me|kya hai|meaning)\b", low)):
+            return rel
+    if q.lower() in GENERIC or r["volume"] < MIN_SOLO_VOLUME:
+        return None
+    return q
+
+
 def pick(rows):
     rows = [r for r in rows if r["query"].isascii()]      # site is in English
+    rows = [dict(r, query=t) for r in rows for t in [better_title(r)] if t]
     rows.sort(key=lambda r: (-r["volume"], len(r["query"])))
     chosen, seen = [], []
     def add(r):
@@ -111,8 +140,12 @@ def pick(rows):
 
 
 def main():
+    # Any failure below exits non-zero BEFORE pulse.json is written, so a blocked or broken source
+    # (e.g. Google answering 403/429 to a cloud server) keeps the previous list on the site.
     try:
         rows, via = from_trends_page(), "trending page"
+        if len(rows) < 20:
+            raise ValueError(f"only {len(rows)} trends came back")
     except Exception as e:
         print(f"trending page failed ({e}); using the RSS feed")
         try:
@@ -122,8 +155,12 @@ def main():
     items = pick(rows)
     if len(items) < 3:
         sys.exit(f"ERROR: only {len(items)} usable topics (pulse.json left unchanged)")
-    ist = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=5, minutes=30)))
     data = json.load(open(PULSE)) if os.path.exists(PULSE) else {}
+    old = (data.get("trends") or {}).get("items") or []
+    if [(i.get("label"), i.get("volume")) for i in old] == [(i["label"], i["volume"]) for i in items]:
+        print("Same list as last time; pulse.json left unchanged.")
+        return
+    ist = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=5, minutes=30)))
     data["trends"] = {
         "updated_ist": ist.strftime("%-d %b %Y, %-I:%M %p IST"),
         "updated_iso": ist.isoformat(timespec="minutes"),
