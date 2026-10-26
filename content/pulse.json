@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "26 Oct 2026, 2:12 AM IST",
-  "updated_iso": "2026-10-26T02:12+05:30",
+  "updated_ist": "26 Oct 2026, 6:39 AM IST",
+  "updated_iso": "2026-10-26T06:39+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -58,13 +58,6 @@
     "volume": "1M+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=england+vs+pakistan&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "ENG vs Pak",
-    "query": "eng vs pak",
-    "volume": "200K+",
-    "category": "Politics",
-    "url": "https://news.google.com/search?q=eng+vs+pak&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Man Utd vs Bournemouth",
@@ -95,11 +88,18 @@
     "url": "https://news.google.com/search?q=kerala+blasters+vs+mumbai+city&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Tejal Hasabnis",
-    "query": "tejal hasabnis",
+    "label": "Fc Barcelona vs Real Madrid Standings",
+    "query": "fc barcelona vs real madrid standings",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=fc+barcelona+vs+real+madrid+standings&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "La Liga",
+    "query": "la liga",
     "volume": "50K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=tejal+hasabnis&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=la+liga&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
