@@ -39,32 +39,25 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "26 Oct 2026, 10:19 AM IST",
-  "updated_iso": "2026-10-26T10:19+05:30",
+  "updated_ist": "26 Oct 2026, 2:28 PM IST",
+  "updated_iso": "2026-10-26T14:28+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "England vs Pakistan",
-    "query": "england vs pakistan",
-    "volume": "1M+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=england+vs+pakistan&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "India vs Zimbabwe",
-    "query": "india vs zimbabwe",
+    "label": "England Cricket Team vs Pakistan Standings",
+    "query": "england cricket team vs pakistan national cricket team standings",
     "volume": "500K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=india+vs+zimbabwe&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=england+cricket+team+vs+pakistan+national+cricket+team+standings&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Vaishnavi Sharma",
-    "query": "vaishnavi sharma",
+    "label": "Deepti Sharma",
+    "query": "deepti sharma",
     "volume": "200K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=vaishnavi+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=deepti+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "El Clasico Match",
@@ -74,18 +67,32 @@
     "url": "https://news.google.com/search?q=el+clasico+match&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Rm vs Barca",
+    "query": "rm vs barca",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=rm+vs+barca&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Liverpool vs Brighton",
+    "query": "liverpool vs brighton",
+    "volume": "100K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=liverpool+vs+brighton&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Man Utd vs Bournemouth",
     "query": "man utd vs bournemouth",
-    "volume": "200K+",
+    "volume": "100K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=man+utd+vs+bournemouth&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Fc Barcelona vs Real Madrid Standings",
-    "query": "fc barcelona vs real madrid standings",
-    "volume": "200K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=fc+barcelona+vs+real+madrid+standings&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Jio IPO Allotment Status",
+    "query": "jio ipo allotment status",
+    "volume": "100K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=jio+ipo+allotment+status&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Kerala Blasters vs Mumbai City",
@@ -93,13 +100,6 @@
     "volume": "100K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=kerala+blasters+vs+mumbai+city&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Rm vs Barca",
-    "query": "rm vs barca",
-    "volume": "50K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=rm+vs+barca&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
