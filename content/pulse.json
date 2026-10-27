@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "27 Oct 2026, 2:25 PM IST",
-  "updated_iso": "2026-10-27T14:25+05:30",
+  "updated_ist": "27 Oct 2026, 6:30 PM IST",
+  "updated_iso": "2026-10-27T18:30+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -48,7 +48,7 @@
    {
     "label": "New Zealand vs India",
     "query": "new zealand vs india",
-    "volume": "1M+",
+    "volume": "2M+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=new+zealand+vs+india&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
@@ -56,8 +56,15 @@
     "label": "WhatsApp",
     "query": "whatsapp",
     "volume": "500K+",
-    "category": "",
+    "category": "Business",
     "url": "https://news.google.com/search?q=whatsapp&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Pak vs Sl",
+    "query": "pak vs sl",
+    "volume": "200K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=pak+vs+sl&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Harry Kane",
@@ -67,6 +74,13 @@
     "url": "https://news.google.com/search?q=harry+kane&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Marques Ackerman",
+    "query": "marques ackerman",
+    "volume": "200K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=marques+ackerman&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Very Severe Cyclonic Storm Arnab",
     "query": "very severe cyclonic storm arnab",
     "volume": "200K+",
@@ -74,32 +88,18 @@
     "url": "https://news.google.com/search?q=very+severe+cyclonic+storm+arnab&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "GMP of Jio IPO",
-    "query": "gmp of jio ipo",
-    "volume": "100K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=gmp+of+jio+ipo&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Live Score Cricket",
-    "query": "live score cricket",
-    "volume": "100K+",
-    "category": "Politics",
-    "url": "https://news.google.com/search?q=live+score+cricket&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Mohun Bagan vs Chennaiyin",
-    "query": "mohun bagan vs chennaiyin",
-    "volume": "100K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=mohun+bagan+vs+chennaiyin&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
     "label": "Sony Liv",
     "query": "sony liv",
-    "volume": "50K+",
+    "volume": "100K+",
     "category": "Entertainment",
     "url": "https://news.google.com/search?q=sony+liv&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Cricket Live",
+    "query": "cricket live",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=cricket+live&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
