@@ -1,5 +1,10 @@
 {
   "site_name": "Day1 Startup Media",
+  "home_title": "Day1 Startup Media – Indian startup stories & news",
+  "alternate_names": [
+    "Day1 Startup",
+    "Day1"
+  ],
   "site_url": "https://day1startup.com",
   "tagline": "Stories of new Indian startups, from day one.",
   "description": "Day1 Startup Media covers new Indian startups: launch news, founder stories and the businesses building from day one.",
@@ -38,5 +43,6 @@
       "url": "https://youtube.com/@jointhefox"
     }
   ],
-  "whatsapp_channel": "https://whatsapp.com/channel/0029VbDWwesIXnlpTj8sOS3Z"
+  "whatsapp_channel": "https://whatsapp.com/channel/0029VbDWwesIXnlpTj8sOS3Z",
+  "google_site_verification": ""
 }

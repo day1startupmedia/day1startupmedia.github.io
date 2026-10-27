@@ -268,15 +268,40 @@ def follow_block():
     return f"""<section class="follow"><div><h2>Follow Day1 Startup Media</h2><p>Watch our startup-story videos on Instagram, Facebook, LinkedIn, Threads, X and YouTube.</p></div>{social_icons("socials big")}</section>"""
 
 
-def org_ld():
-    return json.dumps({"@context": "https://schema.org", "@type": "Organization", "name": CFG["site_name"],
-                       "url": BASE + "/", "logo": BASE + "/static/img/logo.png",
-                       "sameAs": [x["url"] for x in CFG.get("socials", [])]})
+def org_node():
+    node = {"@type": "Organization", "@id": BASE + "/#organization", "name": CFG["site_name"]}
+    if CFG.get("alternate_names"):
+        node["alternateName"] = CFG["alternate_names"]
+    node.update({"url": BASE + "/", "logo": BASE + "/static/img/logo.png",
+                 "sameAs": [x["url"] for x in CFG.get("socials", [])]})
+    return node
+
+
+def org_ld(path="/"):
+    org = org_node()
+    if path != "/":
+        return json.dumps({"@context": "https://schema.org", **org})
+    site = {"@type": "WebSite", "@id": BASE + "/#website", "name": CFG["site_name"]}
+    if CFG.get("alternate_names"):
+        site["alternateName"] = CFG["alternate_names"]
+    site.update({"url": BASE + "/", "description": CFG["description"], "inLanguage": "en-IN",
+                 "publisher": {"@id": BASE + "/#organization"}})
+    return json.dumps({"@context": "https://schema.org", "@graph": [org, site]})
+
+
+def verification_meta(path):
+    code = (CFG.get("google_site_verification") or "").strip()
+    if path != "/" or not code:
+        return ""
+    return f'<meta name="google-site-verification" content="{esc(code)}">\n'
 
 
 def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="website", extra_head=""):
     url = BASE + path
-    full_title = title if title == CFG["site_name"] else f"{title} | {CFG['site_name']}"
+    if path == "/" and CFG.get("home_title"):
+        full_title = CFG["home_title"]
+    else:
+        full_title = title if title == CFG["site_name"] else f"{title} | {CFG['site_name']}"
     img = BASE + image
     cats = "".join(f'<a href="/category/{slugify(c)}/">{esc(c)}</a>' for c in CATEGORIES)
     year = datetime.now().year
@@ -288,7 +313,7 @@ def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="w
 <title>{esc(full_title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">
-<meta property="og:site_name" content="{esc(CFG['site_name'])}">
+{verification_meta(path)}<meta property="og:site_name" content="{esc(CFG['site_name'])}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
@@ -306,13 +331,13 @@ def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="w
 <link rel="apple-touch-icon" href="/static/img/icon.png">
 <link rel="alternate" type="application/rss+xml" title="{esc(CFG['site_name'])}" href="/rss.xml">
 <link rel="stylesheet" href="/static/style.css?v={CFG.get('css_version','1')}">
-<script type="application/ld+json">{org_ld()}</script>
+<script type="application/ld+json">{org_ld(path)}</script>
 {extra_head}
 </head>
 <body translate="no" class="notranslate">
 <header class="top">
   <div class="wrap top-in">
-    <a class="brand" translate="no" href="/" aria-label="{esc(CFG['site_name'])} home"><img src="/static/img/logo.png" alt="Day1 logo" width="62" height="40"><span>Startup<b>Media</b></span></a>
+    <a class="brand" translate="no" href="/" aria-label="{esc(CFG['site_name'])} home"><img src="/static/img/logo.png" alt="{esc(CFG['site_name'])}" width="62" height="40"><span>Startup<b>Media</b></span></a>
     <nav class="mainnav"><a href="/">News</a><a href="/trending/">Trending</a><a href="/about/">About</a><a class="srch" href="/search/" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a><a class="btn-feature" href="/post-your-story/">Post your story</a></nav>
   </div>
   <nav class="catbar"><div class="wrap"><a class="tr" href="/trending/">Trending</a>{cats}</div></nav>
@@ -464,7 +489,7 @@ def article_page(a, arts):
     ld = json.dumps({"@context": "https://schema.org", "@type": "NewsArticle", "headline": a["title"],
                      "datePublished": a["dt"].strftime("%Y-%m-%d"), "image": [BASE + a["image_url"]],
                      "author": {"@type": "Organization", "name": a["author"]},
-                     "publisher": {"@type": "Organization", "name": CFG["site_name"]},
+                     "publisher": {"@type": "Organization", "@id": BASE + "/#organization", "name": CFG["site_name"], "url": BASE + "/", "logo": {"@type": "ImageObject", "url": BASE + "/static/img/logo.png"}},
                      "description": a.get("summary", "")})
     body = f"""<article class="post">
   <div class="meta"><a class="cat" href="/category/{slugify(a['category'])}/">{esc(a['category'])}</a>{city}</div>
@@ -543,7 +568,8 @@ def rss(arts):
 
 
 def sitemap(arts):
-    urls = [("/", None), ("/trending/", None), ("/search/", None), ("/about/", None), ("/post-your-story/", None)]
+    newest = max((a["dt"] for a in arts), default=None)
+    urls = [("/", newest.strftime("%Y-%m-%d") if newest else None), ("/trending/", None), ("/search/", None), ("/about/", None), ("/post-your-story/", None)]
     urls += [(f"/category/{slugify(c)}/", None) for c in CATEGORIES]
     urls += [(f"/news/{a['slug']}/", a["dt"].strftime("%Y-%m-%d")) for a in arts]
     body = "".join(f"<url><loc>{BASE}{u}</loc>" + (f"<lastmod>{d}</lastmod>" if d else "") + "</url>" for u, d in urls)
@@ -622,6 +648,10 @@ def main():
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     shutil.copytree(os.path.join(ROOT, "static"), os.path.join(OUT, "static"))
+    icon = os.path.join(ROOT, "static", "img", "icon.png")
+    if os.path.exists(icon):  # /favicon.ico for browsers and crawlers that ask for it directly
+        from PIL import Image
+        Image.open(icon).convert("RGBA").save(os.path.join(OUT, "favicon.ico"), sizes=[(48, 48), (32, 32), (16, 16)])
     shutil.copytree(os.path.join(ROOT, "content", "images"), os.path.join(OUT, "images"))
     live_imgs = {a.get("image", "").lstrip("/") for a in arts}
     for img in draft_images() - live_imgs:  # draft covers stay unpublished
