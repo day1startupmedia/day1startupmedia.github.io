@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "27 Oct 2026, 6:32 AM IST",
-  "updated_iso": "2026-10-27T06:32+05:30",
+  "updated_ist": "27 Oct 2026, 10:17 AM IST",
+  "updated_iso": "2026-10-27T10:17+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -53,18 +53,25 @@
     "url": "https://news.google.com/search?q=ballon+d%27or&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "IPO Allotment Status",
-    "query": "ipo allotment status",
+    "label": "Kfintech IPO Allotment Status",
+    "query": "kfintech ipo allotment status",
     "volume": "200K+",
     "category": "Business",
-    "url": "https://news.google.com/search?q=ipo+allotment+status&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=kfintech+ipo+allotment+status&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Hyundai Bayon Price",
-    "query": "hyundai bayon price",
+    "label": "Very Severe Cyclonic Storm Arnab",
+    "query": "very severe cyclonic storm arnab",
+    "volume": "200K+",
+    "category": "Weather",
+    "url": "https://news.google.com/search?q=very+severe+cyclonic+storm+arnab&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Hyundai Bayon",
+    "query": "hyundai bayon",
     "volume": "100K+",
     "category": "Auto",
-    "url": "https://news.google.com/search?q=hyundai+bayon+price&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=hyundai+bayon&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Mohun Bagan vs Chennaiyin",
@@ -74,6 +81,13 @@
     "url": "https://news.google.com/search?q=mohun+bagan+vs+chennaiyin&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Psg vs Ol",
+    "query": "psg vs ol",
+    "volume": "50K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=psg+vs+ol&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Ugc Net",
     "query": "ugc net",
     "volume": "20K+",
@@ -81,25 +95,11 @@
     "url": "https://news.google.com/search?q=ugc+net&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Psg vs Ol",
-    "query": "psg vs ol",
+    "label": "Microsoft Buyouts",
+    "query": "microsoft buyouts",
     "volume": "20K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=psg+vs+ol&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Anbil Mahesh",
-    "query": "anbil mahesh",
-    "volume": "20K+",
-    "category": "Govt",
-    "url": "https://news.google.com/search?q=anbil+mahesh&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Serbian Elections",
-    "query": "serbian elections",
-    "volume": "20K+",
-    "category": "",
-    "url": "https://news.google.com/search?q=serbian+elections&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "category": "Business",
+    "url": "https://news.google.com/search?q=microsoft+buyouts&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
