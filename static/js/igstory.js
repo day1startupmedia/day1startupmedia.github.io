@@ -45,7 +45,7 @@ window.day1Story=get;
 addEventListener('load',function(){setTimeout(get,800)});
 })();
 /* Day1: on the Google Translate proxy, point links back to the original English site */
-(function(){if(!/\.translate\.goog$/.test(location.hostname))return;var O='https://day1startupmedia.github.io';document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href'),u;try{u=new URL(h,location.href)}catch(e){return}
+(function(){if(!/\.translate\.goog$/.test(location.hostname))return;var O='https://day1startup.com';document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href'),u;try{u=new URL(h,location.href)}catch(e){return}
 if(u.hostname=='translate.google.com'&&u.searchParams.get('u'))a.setAttribute('href',u.searchParams.get('u'));
 else if(/\.translate\.goog$/.test(u.hostname)){if(u.pathname==location.pathname&&/#/.test(h)){a.setAttribute('href',u.hash||'#');return}['_x_tr_sl','_x_tr_tl','_x_tr_hl','_x_tr_pto','_x_tr_hist'].forEach(function(k){u.searchParams.delete(k)});a.setAttribute('href',O+u.pathname+u.search+u.hash)}})})();
 /* Day1: native Share button + Android app links for LinkedIn/X */
@@ -63,4 +63,4 @@ if(A)[['s-li','com.linkedin.android'],['s-x','com.twitter.android']].forEach(fun
 })();
 /* Day1: "Read in" language selector -> Google Translate website proxy */
 (function(){var s=document.getElementById('lg');if(!s)return;[['hi','हिन्दी (Hindi)'],['bn','বাংলা (Bengali)'],['mr','मराठी (Marathi)'],['te','తెలుగు (Telugu)'],['ta','தமிழ் (Tamil)'],['gu','ગુજરાતી (Gujarati)'],['ur','اردو (Urdu)'],['kn','ಕನ್ನಡ (Kannada)'],['ml','മലയാളം (Malayalam)'],['pa','ਪੰਜਾਬੀ (Punjabi)']].forEach(function(l){s.add(new Option(l[1],l[0]))});var q=new URLSearchParams(location.search).get('_x_tr_tl');if(q&&s.querySelector('[value="'+q+'"]'))s.value=q;
-s.onchange=function(){var c=s.value,p=location.pathname;location.href=c=='en'?'https://day1startupmedia.github.io'+p:'https://day1startupmedia-github-io.translate.goog'+p+'?_x_tr_sl=en&_x_tr_tl='+c+'&_x_tr_hl='+c}})();
+s.onchange=function(){var c=s.value,p=location.pathname;location.href=c=='en'?'https://day1startup.com'+p:'https://day1startup-com.translate.goog'+p+'?_x_tr_sl=en&_x_tr_tl='+c+'&_x_tr_hl='+c}})();

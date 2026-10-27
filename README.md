@@ -1,18 +1,18 @@
 # Day1 Startup Media
 
-Website: https://day1startupmedia.github.io/
-Admin (phone se article daalo): https://day1startupmedia.github.io/admin/
+Website: https://day1startup.com/
+Admin (phone se article daalo): https://day1startup.com/admin/
 
 Ye Day1 Startup Media ki website hai. Ye GitHub Pages pe free chalti hai.
 
 ## Phone se naya article kaise daalein
 
-1. Phone pe ye kholo: day1startupmedia.github.io/admin
+1. Phone pe ye kholo: day1startup.com/admin
 2. "Sign in with GitHub" dabao aur apne day1startupmedia GitHub account se login karo (agar GitHub "Authorize" pooche to Authorize dabao).
 3. "Articles" kholo, phir upar wala green "+" button dabao (naya article).
 4. Title, Date, Category bharo. "Cover photo" mein "Upload" dabake photo chuno (koi bhi photo/screenshot chalega). Summary (1-2 line) aur Tags bharo, aur neeche "Article" box mein poori khabar likho.
 5. Upar right wala green Save button dabao.
-6. Bas! Lagbhag 2 minute mein article website pe live: day1startupmedia.github.io
+6. Bas! Lagbhag 2 minute mein article website pe live: day1startup.com
 
 Badlaav ya delete: Articles list mein article pe tap karo, badlo, Save. Delete ke liye article ke aage "..." button > Delete. Article chhupana ho to "Hide from website (draft)" on kar do.
 

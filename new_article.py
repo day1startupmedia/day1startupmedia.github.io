@@ -81,7 +81,7 @@ def main():
     print(f"Wrote {path}")
     if img_rel:
         print(f"Cover  {os.path.join(ROOT, 'content', img_rel)}")
-    print(f"URL after build + git push: https://day1startupmedia.github.io/news/{slug}/")
+    print(f"URL after build + git push: https://day1startup.com/news/{slug}/")
 
 
 if __name__ == "__main__":

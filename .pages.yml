@@ -1,5 +1,5 @@
 # Pages CMS (https://app.pagescms.org) settings for the Day1 Startup Media website.
-# Open https://day1startupmedia.github.io/admin/ on your phone to write articles.
+# Open https://day1startup.com/admin/ on your phone to write articles.
 media:
   input: content/images
   output: images
