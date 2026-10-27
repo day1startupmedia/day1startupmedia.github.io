@@ -39,32 +39,32 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "27 Oct 2026, 2:19 AM IST",
-  "updated_iso": "2026-10-27T02:19+05:30",
+  "updated_ist": "27 Oct 2026, 6:32 AM IST",
+  "updated_iso": "2026-10-27T06:32+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Jio Platforms IPO Allotment Status",
-    "query": "jio platforms ipo allotment status",
-    "volume": "500K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=jio+platforms+ipo+allotment+status&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
     "label": "Ballon D'or",
     "query": "ballon d'or",
-    "volume": "100K+",
+    "volume": "200K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=ballon+d%27or&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Hyundai Bayon",
-    "query": "hyundai bayon",
+    "label": "IPO Allotment Status",
+    "query": "ipo allotment status",
+    "volume": "200K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=ipo+allotment+status&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Hyundai Bayon Price",
+    "query": "hyundai bayon price",
     "volume": "100K+",
     "category": "Auto",
-    "url": "https://news.google.com/search?q=hyundai+bayon&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=hyundai+bayon+price&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Mohun Bagan vs Chennaiyin",
@@ -88,11 +88,11 @@
     "url": "https://news.google.com/search?q=psg+vs+ol&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "D'arcy Short",
-    "query": "d'arcy short",
+    "label": "Anbil Mahesh",
+    "query": "anbil mahesh",
     "volume": "20K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=d%27arcy+short&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "category": "Govt",
+    "url": "https://news.google.com/search?q=anbil+mahesh&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Serbian Elections",
