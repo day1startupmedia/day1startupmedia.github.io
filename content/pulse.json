@@ -39,39 +39,18 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "28 Oct 2026, 10:27 AM IST",
-  "updated_iso": "2026-10-28T10:27+05:30",
+  "updated_ist": "28 Oct 2026, 2:32 PM IST",
+  "updated_iso": "2026-10-28T14:32+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Kyle Jamieson",
-    "query": "kyle jamieson",
-    "volume": "2M+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=kyle+jamieson&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Arnab Cyclone Live",
-    "query": "arnab cyclone live",
+    "label": "Severe Cyclonic Storm Arnab",
+    "query": "severe cyclonic storm arnab",
     "volume": "1M+",
     "category": "Weather",
-    "url": "https://news.google.com/search?q=arnab+cyclone+live&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Jio IPO",
-    "query": "jio ipo",
-    "volume": "200K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=jio+ipo&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "AFG vs ZIM",
-    "query": "afg vs zim",
-    "volume": "200K+",
-    "category": "Politics",
-    "url": "https://news.google.com/search?q=afg+vs+zim&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=severe+cyclonic+storm+arnab&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Ijaz Ahmadzai",
@@ -81,6 +60,27 @@
     "url": "https://news.google.com/search?q=ijaz+ahmadzai&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Jpl Share Price",
+    "query": "jpl share price",
+    "volume": "200K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=jpl+share+price&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Fastest T20 Century",
+    "query": "fastest t20 century",
+    "volume": "200K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=fastest+t20+century&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Bangladesh vs West Indies",
+    "query": "bangladesh vs west indies",
+    "volume": "200K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=bangladesh+vs+west+indies&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Pakistan vs Sri Lanka Standings",
     "query": "pakistan national cricket team vs sri lanka national cricket team standings",
     "volume": "200K+",
@@ -88,18 +88,18 @@
     "url": "https://news.google.com/search?q=pakistan+national+cricket+team+vs+sri+lanka+national+cricket+team+standings&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Sony Liv",
-    "query": "sony liv",
-    "volume": "100K+",
-    "category": "Entertainment",
-    "url": "https://news.google.com/search?q=sony+liv&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Cooper Connolly",
-    "query": "cooper connolly",
+    "label": "Mitchell Starc",
+    "query": "mitchell starc",
     "volume": "100K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=cooper+connolly&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=mitchell+starc&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Fleetwood vs Arsenal",
+    "query": "fleetwood vs arsenal",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=fleetwood+vs+arsenal&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
