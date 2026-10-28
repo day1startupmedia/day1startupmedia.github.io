@@ -39,60 +39,46 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "28 Oct 2026, 6:43 AM IST",
-  "updated_iso": "2026-10-28T06:43+05:30",
+  "updated_ist": "28 Oct 2026, 10:27 AM IST",
+  "updated_iso": "2026-10-28T10:27+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Abhishek Sharma",
-    "query": "abhishek sharma",
+    "label": "Kyle Jamieson",
+    "query": "kyle jamieson",
     "volume": "2M+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=abhishek+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=kyle+jamieson&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Very Severe Cyclonic Storm Arnab",
-    "query": "very severe cyclonic storm arnab",
+    "label": "Arnab Cyclone Live",
+    "query": "arnab cyclone live",
     "volume": "1M+",
     "category": "Weather",
-    "url": "https://news.google.com/search?q=very+severe+cyclonic+storm+arnab&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=arnab+cyclone+live&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "WhatsApp",
-    "query": "whatsapp",
-    "volume": "500K+",
-    "category": "",
-    "url": "https://news.google.com/search?q=whatsapp&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Jio IPO",
+    "query": "jio ipo",
+    "volume": "200K+",
+    "category": "Business",
+    "url": "https://news.google.com/search?q=jio+ipo&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Chat Gtp",
-    "query": "chat gtp",
-    "volume": "500K+",
-    "category": "Politics",
-    "url": "https://news.google.com/search?q=chat+gtp&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Pak vs Sl",
-    "query": "pak vs sl",
+    "label": "AFG vs ZIM",
+    "query": "afg vs zim",
     "volume": "200K+",
     "category": "Politics",
-    "url": "https://news.google.com/search?q=pak+vs+sl&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=afg+vs+zim&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Cooper Connolly",
-    "query": "cooper connolly",
+    "label": "Ijaz Ahmadzai",
+    "query": "ijaz ahmadzai",
     "volume": "200K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=cooper+connolly&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Afghanistan vs Zimbabwe",
-    "query": "afghanistan vs zimbabwe",
-    "volume": "200K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=afghanistan+vs+zimbabwe&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=ijaz+ahmadzai&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Pakistan vs Sri Lanka Standings",
@@ -100,6 +86,20 @@
     "volume": "200K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=pakistan+national+cricket+team+vs+sri+lanka+national+cricket+team+standings&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Sony Liv",
+    "query": "sony liv",
+    "volume": "100K+",
+    "category": "Entertainment",
+    "url": "https://news.google.com/search?q=sony+liv&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Cooper Connolly",
+    "query": "cooper connolly",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=cooper+connolly&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
