@@ -39,18 +39,18 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "28 Oct 2026, 2:18 AM IST",
-  "updated_iso": "2026-10-28T02:18+05:30",
+  "updated_ist": "28 Oct 2026, 6:43 AM IST",
+  "updated_iso": "2026-10-28T06:43+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Kyle Jamieson",
-    "query": "kyle jamieson",
+    "label": "Abhishek Sharma",
+    "query": "abhishek sharma",
     "volume": "2M+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=kyle+jamieson&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=abhishek+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Very Severe Cyclonic Storm Arnab",
@@ -67,11 +67,11 @@
     "url": "https://news.google.com/search?q=whatsapp&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "NZ vs IND",
-    "query": "nz vs ind",
-    "volume": "200K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=nz+vs+ind&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Chat Gtp",
+    "query": "chat gtp",
+    "volume": "500K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=chat+gtp&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Pak vs Sl",
@@ -81,17 +81,17 @@
     "url": "https://news.google.com/search?q=pak+vs+sl&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Mitchell Starc",
-    "query": "mitchell starc",
+    "label": "Cooper Connolly",
+    "query": "cooper connolly",
     "volume": "200K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=mitchell+starc&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=cooper+connolly&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Afghanistan vs Zimbabwe",
     "query": "afghanistan vs zimbabwe",
     "volume": "200K+",
-    "category": "Politics",
+    "category": "Sports",
     "url": "https://news.google.com/search?q=afghanistan+vs+zimbabwe&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
