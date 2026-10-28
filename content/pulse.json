@@ -39,18 +39,18 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "28 Oct 2026, 10:32 PM IST",
-  "updated_iso": "2026-10-28T22:32+05:30",
+  "updated_ist": "29 Oct 2026, 2:25 AM IST",
+  "updated_iso": "2026-10-29T02:25+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
    {
-    "label": "Weather Tomorrow",
-    "query": "weather tomorrow",
+    "label": "Severe Cyclonic Storm Arnab",
+    "query": "severe cyclonic storm arnab",
     "volume": "1M+",
     "category": "Weather",
-    "url": "https://news.google.com/search?q=weather+tomorrow&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=severe+cyclonic+storm+arnab&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Harleen Deol",
@@ -69,23 +69,30 @@
    {
     "label": "Bangladesh vs West Indies",
     "query": "bangladesh vs west indies",
-    "volume": "200K+",
+    "volume": "500K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=bangladesh+vs+west+indies&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Fleetwood vs Arsenal",
-    "query": "fleetwood vs arsenal",
+    "label": "Alex Carey",
+    "query": "alex carey",
     "volume": "100K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=fleetwood+vs+arsenal&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=alex+carey&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "South Africa vs Australia",
-    "query": "south africa vs australia",
-    "volume": "100K+",
+    "label": "Da Hike",
+    "query": "da hike",
+    "volume": "50K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=da+hike&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Yastika Bhatia",
+    "query": "yastika bhatia",
+    "volume": "50K+",
     "category": "Sports",
-    "url": "https://news.google.com/search?q=south+africa+vs+australia&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "url": "https://news.google.com/search?q=yastika+bhatia&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Lottery Sambad",
@@ -93,13 +100,6 @@
     "volume": "50K+",
     "category": "",
     "url": "https://news.google.com/search?q=lottery+sambad&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Garena Free Fire India Launch",
-    "query": "garena free fire india launch",
-    "volume": "50K+",
-    "category": "",
-    "url": "https://news.google.com/search?q=garena+free+fire+india+launch&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
