@@ -39,12 +39,26 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "29 Oct 2026, 6:42 PM IST",
-  "updated_iso": "2026-10-29T18:42+05:30",
+  "updated_ist": "29 Oct 2026, 10:35 PM IST",
+  "updated_iso": "2026-10-29T22:35+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
   "items": [
+   {
+    "label": "Chand Nikalne Ka Time",
+    "query": "chand nikalne ka time",
+    "volume": "2M+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=chand+nikalne+ka+time&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Live Moon",
+    "query": "live moon",
+    "volume": "500K+",
+    "category": "Festivals",
+    "url": "https://news.google.com/search?q=live+moon&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
    {
     "label": "England vs Sri Lanka",
     "query": "england vs sri lanka",
@@ -53,11 +67,18 @@
     "url": "https://news.google.com/search?q=england+vs+sri+lanka&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Karva Chauth Ki Kahani",
-    "query": "karva chauth ki kahani",
+    "label": "Ijaz Ahmadzai",
+    "query": "ijaz ahmadzai",
     "volume": "200K+",
-    "category": "Politics",
-    "url": "https://news.google.com/search?q=karva+chauth+ki+kahani&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=ijaz+ahmadzai&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "MacBook Pro",
+    "query": "macbook pro",
+    "volume": "100K+",
+    "category": "Tech",
+    "url": "https://news.google.com/search?q=macbook+pro&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Liverpool vs Chelsea",
@@ -74,32 +95,11 @@
     "url": "https://news.google.com/search?q=man+city+vs+brighton&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "MacBook Pro",
-    "query": "macbook pro",
-    "volume": "50K+",
-    "category": "Tech",
-    "url": "https://news.google.com/search?q=macbook+pro&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Weather Today",
-    "query": "weather today",
-    "volume": "50K+",
-    "category": "Weather",
-    "url": "https://news.google.com/search?q=weather+today&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Lottery Sambad",
-    "query": "lottery sambad",
-    "volume": "50K+",
-    "category": "",
-    "url": "https://news.google.com/search?q=lottery+sambad&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Moon Rise Today",
-    "query": "moon rise today",
-    "volume": "50K+",
-    "category": "Festivals",
-    "url": "https://news.google.com/search?q=moon+rise+today&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Inter Miami vs Cincinnati",
+    "query": "inter miami vs cincinnati",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=inter+miami+vs+cincinnati&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
