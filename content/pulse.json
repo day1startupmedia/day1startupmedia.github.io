@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "29 Oct 2026, 6:41 AM IST",
-  "updated_iso": "2026-10-29T06:41+05:30",
+  "updated_ist": "29 Oct 2026, 10:28 AM IST",
+  "updated_iso": "2026-10-29T10:28+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -60,20 +60,6 @@
     "url": "https://news.google.com/search?q=harleen+deol&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Jpl Share Price",
-    "query": "jpl share price",
-    "volume": "500K+",
-    "category": "Business",
-    "url": "https://news.google.com/search?q=jpl+share+price&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Bangladesh vs West Indies",
-    "query": "bangladesh vs west indies",
-    "volume": "500K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=bangladesh+vs+west+indies&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
     "label": "Alex Carey",
     "query": "alex carey",
     "volume": "100K+",
@@ -81,25 +67,39 @@
     "url": "https://news.google.com/search?q=alex+carey&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Today Weather",
+    "query": "today weather",
+    "volume": "100K+",
+    "category": "Weather",
+    "url": "https://news.google.com/search?q=today+weather&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Liverpool vs Chelsea",
+    "query": "liverpool vs chelsea",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=liverpool+vs+chelsea&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Inter Miami vs Cincinnati",
+    "query": "inter miami vs cincinnati",
+    "volume": "100K+",
+    "category": "Sports",
+    "url": "https://news.google.com/search?q=inter+miami+vs+cincinnati&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Da Hike",
+    "query": "da hike",
+    "volume": "50K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=da+hike&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Yastika Bhatia",
     "query": "yastika bhatia",
     "volume": "50K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=yastika+bhatia&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Lottery Sambad",
-    "query": "lottery sambad",
-    "volume": "50K+",
-    "category": "",
-    "url": "https://news.google.com/search?q=lottery+sambad&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Liverpool vs Chelsea",
-    "query": "liverpool vs chelsea",
-    "volume": "50K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=liverpool+vs+chelsea&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
