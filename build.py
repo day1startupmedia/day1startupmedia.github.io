@@ -303,7 +303,10 @@ def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="w
     else:
         full_title = title if title == CFG["site_name"] else f"{title} | {CFG['site_name']}"
     img = BASE + image
-    cats = "".join(f'<a href="/category/{slugify(c)}/">{esc(c)}</a>' for c in CATEGORIES)
+    _links = [("/", "Home"), ("/trending/", "Trending")] + [(f"/category/{slugify(c)}/", c) for c in CATEGORIES]
+    def _on(h):
+        return path == "/" if h == "/" else path.startswith(h)
+    cats = "".join(('<a class="on"' if _on(h) else '<a') + f' href="{h}">{esc(t)}</a>' for h, t in _links)
     year = datetime.now().year
     return f"""<!doctype html>
 <html lang="en-IN">
@@ -340,7 +343,7 @@ def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="w
     <a class="brand" translate="no" href="/" aria-label="{esc(CFG['site_name'])} home"><img src="/static/img/logo.png" alt="{esc(CFG['site_name'])}" width="62" height="40"><span>Startup<b>Media</b></span></a>
     <nav class="mainnav"><a href="/">News</a><a href="/trending/">Trending</a><a href="/about/">About</a><a class="srch" href="/search/" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a><a class="btn-feature" href="/post-your-story/">Post your story</a></nav>
   </div>
-  <nav class="catbar"><div class="wrap"><a href="/">Home</a><a class="tr" href="/trending/">Trending</a>{cats}</div></nav>
+  <nav class="catbar"><div class="wrap">{cats}</div></nav>
 </header>
 <main class="wrap">
 {body}
