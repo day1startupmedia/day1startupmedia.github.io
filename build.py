@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.path.join(ROOT, "config.json")))
 OUT = os.path.join(ROOT, "docs")  # GitHub Pages serves this folder (main branch, /docs)
 BASE = CFG["site_url"].rstrip("/")
-CATEGORIES = ["Funding", "Launch", "Founder Story", "Local Business", "Tech News"]
+CATEGORIES = ["Tech News", "Funding", "Launch", "Founder Story", "Local Business"]
 esc = html.escape
 
 
@@ -340,7 +340,7 @@ def page(title, desc, path, body, image="/static/img/og-default.jpg", og_type="w
     <a class="brand" translate="no" href="/" aria-label="{esc(CFG['site_name'])} home"><img src="/static/img/logo.png" alt="{esc(CFG['site_name'])}" width="62" height="40"><span>Startup<b>Media</b></span></a>
     <nav class="mainnav"><a href="/">News</a><a href="/trending/">Trending</a><a href="/about/">About</a><a class="srch" href="/search/" aria-label="Search"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a><a class="btn-feature" href="/post-your-story/">Post your story</a></nav>
   </div>
-  <nav class="catbar"><div class="wrap"><a class="tr" href="/trending/">Trending</a>{cats}</div></nav>
+  <nav class="catbar"><div class="wrap"><a href="/">Home</a><a class="tr" href="/trending/">Trending</a>{cats}</div></nav>
 </header>
 <main class="wrap">
 {body}
@@ -607,7 +607,7 @@ LANGS = [('en', 'English'), ('hi', 'हिन्दी (Hindi)'), ('bn', 'বা
 LANG_SEL = '<div class="lang"><label for="lg">🌐 Read in</label><select id="lg" translate="no"><option value="en">English</option></select></div>'  # other options added by JS from LANGS order below
 
 
-SEARCH_CHIPS = [("All", ""), ("Funding", "Funding"), ("Startup Stories", "Founder Story|Local Business"), ("Launches", "Launch"), ("Tech News", "Tech News")]
+SEARCH_CHIPS = [("All", ""), ("Tech News", "Tech News"), ("Funding", "Funding"), ("Startup Stories", "Founder Story|Local Business"), ("Launches", "Launch")]
 
 
 def search_page():
