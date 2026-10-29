@@ -38,7 +38,7 @@ content:
         required: true
         default: Launch
         options:
-          values: [Funding, Launch, Founder Story, Local Business, Tech News]
+          values: [Tech News, Funding, Launch, Founder Story, Local Business]
       - name: city
         label: City
         type: string
