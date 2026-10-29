@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 CFG = json.load(open(os.path.join(ROOT, "config.json")))
 OUT = os.path.join(ROOT, "docs")  # GitHub Pages serves this folder (main branch, /docs)
 BASE = CFG["site_url"].rstrip("/")
-CATEGORIES = ["Funding", "Launch", "Founder Story", "Local Business"]
+CATEGORIES = ["Funding", "Launch", "Founder Story", "Local Business", "Tech News"]
 esc = html.escape
 
 
@@ -607,7 +607,7 @@ LANGS = [('en', 'English'), ('hi', 'हिन्दी (Hindi)'), ('bn', 'বা
 LANG_SEL = '<div class="lang"><label for="lg">🌐 Read in</label><select id="lg" translate="no"><option value="en">English</option></select></div>'  # other options added by JS from LANGS order below
 
 
-SEARCH_CHIPS = [("All", ""), ("Funding", "Funding"), ("Startup Stories", "Founder Story|Local Business"), ("Launches", "Launch")]
+SEARCH_CHIPS = [("All", ""), ("Funding", "Funding"), ("Startup Stories", "Founder Story|Local Business"), ("Launches", "Launch"), ("Tech News", "Tech News")]
 
 
 def search_page():
