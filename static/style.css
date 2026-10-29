@@ -127,7 +127,7 @@ main{padding-top:16px;padding-bottom:32px}
  .pulse h2{font-size:16px}.bar{grid-template-columns:120px 1fr 60px;font-size:13px}.bars{gap:7px}
 }
 .mainnav a.srch{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:#1d1d1d;color:#fff}.mainnav a.srch:hover{color:var(--y)}
-.catbar a.tr{color:var(--y)}
+.catbar a.on{color:var(--y)}
 .sbox input{width:100%;font:inherit;font-size:17px;padding:12px 16px;border:2px solid #000;border-radius:12px;background:#fff;outline:0}.sbox input:focus{border-color:#b38f00}
 .schips{margin-top:12px}.schips{gap:6px}.schips button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;padding:6px 12px;border-radius:999px;font-size:13.5px;font-weight:600;white-space:nowrap;color:var(--ink)}.schips button.on{background:#000;color:var(--y);border-color:#000}
 .scount{font-size:13px;color:var(--mut);margin:4px 0 8px}
