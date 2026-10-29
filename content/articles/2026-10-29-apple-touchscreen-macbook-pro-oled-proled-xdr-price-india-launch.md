@@ -2,10 +2,9 @@
 title: "Apple MacBook Pro Touchscreen Launched: OLED PROLED XDR, Price in India,
   Specs and Release Date"
 date: 2026-10-29
-category: Launch
+category: Tech News
 city: Los Angeles
 image: images/1000303930.jpg
-image_caption: Illustration by Day1 Startup Media. Not an official Apple image.
 summary: Apple has launched its first touchscreen MacBook Pro with a tandem OLED
   'PROLED XDR' display, Dynamic Island and M5 Pro/M5 Max chips. 14-inch from
   $2,899, 16-inch from $3,399; India price reported from ₹3.49 lakh. Ships 6
