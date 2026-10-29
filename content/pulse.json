@@ -39,8 +39,8 @@
   "verified": "Read off slide 25 'Weekly time spent with media' of the Digital 2026 India deck embedded on the source page, 24 Oct 2026. Labels map: Social media, Online videos: short-form, Online videos: long-form, Music streaming services, TV: streaming, Games: mobile phones, TV: linear or broadcast."
  },
  "trends": {
-  "updated_ist": "29 Oct 2026, 2:34 PM IST",
-  "updated_iso": "2026-10-29T14:34+05:30",
+  "updated_ist": "29 Oct 2026, 6:42 PM IST",
+  "updated_iso": "2026-10-29T18:42+05:30",
   "source": "Google Trends",
   "source_url": "https://trends.google.com/trending?geo=IN&hours=24",
   "fetched_via": "trending page",
@@ -48,30 +48,16 @@
    {
     "label": "England vs Sri Lanka",
     "query": "england vs sri lanka",
-    "volume": "200K+",
+    "volume": "500K+",
     "category": "Sports",
     "url": "https://news.google.com/search?q=england+vs+sri+lanka&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
-    "label": "Alex Carey",
-    "query": "alex carey",
-    "volume": "100K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=alex+carey&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Weather Today",
-    "query": "weather today",
-    "volume": "100K+",
-    "category": "Weather",
-    "url": "https://news.google.com/search?q=weather+today&hl=en-IN&gl=IN&ceid=IN%3Aen"
-   },
-   {
-    "label": "Vaishnavi Sharma",
-    "query": "vaishnavi sharma",
-    "volume": "100K+",
-    "category": "Sports",
-    "url": "https://news.google.com/search?q=vaishnavi+sharma&hl=en-IN&gl=IN&ceid=IN%3Aen"
+    "label": "Karva Chauth Ki Kahani",
+    "query": "karva chauth ki kahani",
+    "volume": "200K+",
+    "category": "Politics",
+    "url": "https://news.google.com/search?q=karva+chauth+ki+kahani&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
     "label": "Liverpool vs Chelsea",
@@ -95,11 +81,25 @@
     "url": "https://news.google.com/search?q=macbook+pro&hl=en-IN&gl=IN&ceid=IN%3Aen"
    },
    {
+    "label": "Weather Today",
+    "query": "weather today",
+    "volume": "50K+",
+    "category": "Weather",
+    "url": "https://news.google.com/search?q=weather+today&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
     "label": "Lottery Sambad",
     "query": "lottery sambad",
     "volume": "50K+",
     "category": "",
     "url": "https://news.google.com/search?q=lottery+sambad&hl=en-IN&gl=IN&ceid=IN%3Aen"
+   },
+   {
+    "label": "Moon Rise Today",
+    "query": "moon rise today",
+    "volume": "50K+",
+    "category": "Festivals",
+    "url": "https://news.google.com/search?q=moon+rise+today&hl=en-IN&gl=IN&ceid=IN%3Aen"
    }
   ]
  }
