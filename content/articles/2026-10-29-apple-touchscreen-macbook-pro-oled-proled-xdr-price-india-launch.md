@@ -1,16 +1,30 @@
 ---
-title: "Apple MacBook Pro Touchscreen Launched: OLED PROLED XDR, Price in India, Specs and Release Date"
-slug: apple-touchscreen-macbook-pro-oled-proled-xdr-price-india-launch
+title: "Apple MacBook Pro Touchscreen Launched: OLED PROLED XDR, Price in India,
+  Specs and Release Date"
 date: 2026-10-29
-time: 15:45
+category: Launch
 city: Los Angeles
-category: Tech News
-tags: [Apple, MacBook Pro, Apple MacBook Pro, Touchscreen MacBook, MacBook Pro OLED, PROLED XDR, M5 Max, MacBook Pro price in India, Tech]
-image: images/apple-touchscreen-macbook-pro-oled-proled-xdr-price-india-launch.jpg
-image_caption: "Illustration by Day1 Startup Media. Not an official Apple image."
-summary: "Apple has launched its first touchscreen MacBook Pro with a tandem OLED 'PROLED XDR' display, Dynamic Island and M5 Pro/M5 Max chips. 14-inch from $2,899, 16-inch from $3,399; India price reported from ₹3.49 lakh. Ships 6 November."
-author: Day1 Startup Media
+image: images/1000303930.jpg
+image_caption: Illustration by Day1 Startup Media. Not an official Apple image.
+summary: Apple has launched its first touchscreen MacBook Pro with a tandem OLED
+  'PROLED XDR' display, Dynamic Island and M5 Pro/M5 Max chips. 14-inch from
+  $2,899, 16-inch from $3,399; India price reported from ₹3.49 lakh. Ships 6
+  November.
+tags:
+  - Apple
+  - MacBook Pro
+  - Apple MacBook Pro
+  - Touchscreen MacBook
+  - MacBook Pro OLED
+  - PROLED XDR
+  - M5 Max
+  - MacBook Pro price in India
+  - Tech
 featured: true
+draft: false
+author: Day1 Startup Media
+slug: apple-touchscreen-macbook-pro-oled-proled-xdr-price-india-launch
+time: 15:45
 ---
 **Apple MacBook Pro touchscreen is finally here.** At its "Pro and Tell" event in Los Angeles on **28 October 2026**, Apple launched the **MacBook Pro with PROLED XDR Display**, the first Mac ever with a **touchscreen**. It is the biggest MacBook Pro redesign since 2021, and a big U-turn for Apple, which said no to touchscreen Macs for more than 15 years.
 
